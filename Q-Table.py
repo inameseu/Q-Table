@@ -40,5 +40,9 @@ for i in range(num_episodes):
         
         action = select_action(state_0, explore_rate)
         obv, reward, done, _ = env.step(action)
+        
+        state = obv
+        
+        q_table += learning_rate * (reward + discount_factor * (np.amax(q_table[state]) - q_table[]))
 
 
