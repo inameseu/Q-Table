@@ -43,6 +43,6 @@ for i in range(num_episodes):
         
         state = obv
         
-        q_table += learning_rate * (reward + discount_factor * (np.amax(q_table[state]) - q_table[]))
+        q_table += learning_rate * (reward + discount_factor * (np.amax(q_table[state])) - q_table[state_0 + (action,)])
 
 
