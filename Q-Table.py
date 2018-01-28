@@ -37,5 +37,8 @@ for i in range(num_episodes):
 
     for t in range(max_time):
         env.render()
+        
+        action = select_action(state_0, explore_rate)
+        obv, reward, done, _ = env.step(action)
 
 
