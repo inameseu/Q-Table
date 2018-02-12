@@ -2,7 +2,6 @@ import gym
 from gym import wrappers
 import numpy as np
 import random
-import math
 
 env = gym.make("FrozenLake-v0")
 
